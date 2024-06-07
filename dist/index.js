@@ -135,7 +135,7 @@ function run() {
             yield installer.install(version);
             const solutionPath = core.getInput('solutionPath');
             const outputPath = 'result.xml';
-            let command = `jb inspectcode --output=${outputPath} --absolute-paths ${solutionPath}`;
+            let command = `jb inspectcode --f="xml" --output=${outputPath} --absolute-paths ${solutionPath}`;
             const verbosity = (_b = core.getInput('verbosity')) !== null && _b !== void 0 ? _b : '';
             if (verbosity !== '') {
                 command += ` --verbosity=${verbosity}`;
